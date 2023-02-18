@@ -38,7 +38,9 @@ struct UsersListView: View {
             .navigationTitle("Users")
             .listStyle(.plain)
             .onAppear {
-                vm.fetchUsers()
+                Task {
+                    await vm.fetchUsers()
+                }
             }
         }
     }

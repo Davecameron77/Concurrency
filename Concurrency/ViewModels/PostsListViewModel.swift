@@ -14,29 +14,21 @@ class PostsListsViewModel: ObservableObject {
     @Published var errorMessage: String?
     var userId: Int?
     
-    func fetchPosts() {
+    @MainActor
+    func fetchPosts() async {
         if let userId = userId {
             let apiService = APIService(urlString: "https://jsonplaceholder.typicode.com/user/\(userId)/posts")
             isLoading = true
             
-            apiService.getJSON { (result: Result<[Post], APIError>) in
-                defer {
-                    DispatchQueue.main.async {
-                        self.isLoading.toggle()
-                    }
-                }
-                
-                switch result {
-                case.success(let posts):
-                    DispatchQueue.main.async {
-                        self.posts = posts
-                    }
-                case .failure(let error):
-                    DispatchQueue.main.async {
-                        self.showingAlert = true
-                        self.errorMessage = error.localizedDescription + "\nPlease contact the developer"
-                    }
-                }
+            isLoading.toggle()
+            defer {
+                isLoading.toggle()
+            }
+            do {
+                posts = try await apiService.getJSON()
+            } catch {
+                showingAlert = true
+                errorMessage = error.localizedDescription + "\n Please contact the developer"
             }
         }
     }

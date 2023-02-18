@@ -38,8 +38,10 @@ struct PostsListView: View {
         .navigationTitle("Posts")
         .listStyle(.plain)
         .onAppear {
-            vm.userId = userId
-            vm.fetchPosts()
+            Task {
+                vm.userId = userId
+                await vm.fetchPosts()
+            }
         }
     }
 }
