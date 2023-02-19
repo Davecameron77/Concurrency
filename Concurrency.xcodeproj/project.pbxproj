@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B22B0D0F29A1BD4A008D73F7 /* UserAndPosts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B0D0E29A1BD4A008D73F7 /* UserAndPosts.swift */; };
 		B2AF6A0529A14F86009E8953 /* ConcurrencyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AF6A0429A14F86009E8953 /* ConcurrencyApp.swift */; };
 		B2AF6A0729A14F86009E8953 /* UsersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AF6A0629A14F86009E8953 /* UsersListView.swift */; };
 		B2AF6A0929A14F88009E8953 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2AF6A0829A14F88009E8953 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B22B0D0E29A1BD4A008D73F7 /* UserAndPosts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAndPosts.swift; sourceTree = "<group>"; };
 		B2AF6A0129A14F86009E8953 /* Concurrency.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concurrency.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2AF6A0429A14F86009E8953 /* ConcurrencyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyApp.swift; sourceTree = "<group>"; };
 		B2AF6A0629A14F86009E8953 /* UsersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListView.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				B2AF6A1429A150E2009E8953 /* User.swift */,
+				B22B0D0E29A1BD4A008D73F7 /* UserAndPosts.swift */,
 				B2AF6A1629A15164009E8953 /* Post.swift */,
 			);
 			path = Models;
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B22B0D0F29A1BD4A008D73F7 /* UserAndPosts.swift in Sources */,
 				B2AF6A0729A14F86009E8953 /* UsersListView.swift in Sources */,
 				B2AF6A2629A15B0F009E8953 /* Bundle+Extension.swift in Sources */,
 				B2AF6A1D29A15825009E8953 /* UsersListViewModel.swift in Sources */,
